@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato & Votação - Meu Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="linguagens.html">Linguagens</a></li>
+                    <li><a href="ciencias-da-natureza.html">Ciências da Natureza</a></li>
+                    <li><a href="matematica.html">Matemática</a></li>
+                    <li><a href="ciencias-humanas.html">Ciências Humanas</a></li>
+                    <li><a href="iot.html">IoT</a></li>
+                   
+                    <li><a href="contact-voting.html">Contato & Votação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Contato & Votação</h1>
+            <div class="page-intro">
+                <p>Entre em contato para colaborações e ajude-me a identificar meus melhores trabalhos através do sistema de votação interativo.</p>
+            </div>
+
+            <!-- SEÇÃO DE CONTATO -->
+            <div class="content-box accent super-fade-in">
+                <div class="box-header">
+                    <div class="box-icon">📧</div>
+                    <h2 class="box-title">Entre em Contato</h2>
+                </div>
+                <div class="box-content">
+                    <p>Envie sua mensagem e entrarei em contato o mais breve possível. Estou sempre aberta a novas ideias, colaborações e oportunidades.</p>
+                </div>
+                
+                <div class="contact-form-modern">
+                    <form id="contactForm">
+                        <div class="form-group-modern">
+                            <input type="text" id="name" name="name" class="form-control-modern" required>
+                            <label for="name">Nome Completo</label>
+                        </div>
+                        
+                        <div class="form-group-modern">
+                            <input type="email" id="email" name="email" class="form-control-modern" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        
+                        <div class="form-group-modern">
+                            <textarea id="message" name="message" class="form-control-modern" rows="5" required></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-super">
+                            <span>Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SEÇÃO DE VOTAÇÃO -->
+            <div class="content-box warning super-fade-in">
+                <div class="box-header">
+                    <div class="box-icon">⭐</div>
+                    <h2 class="box-title">Sistema de Votação</h2>
+                    <span class="box-badge">Vote uma vez por dia</span>
+                </div>
+                <div class="box-content">
+                    <p>Ajude-me a identificar meu melhor trabalho! Vote no projeto que mais gostou e acompanhe o ranking em tempo real.</p>
+                </div>
+
+                <div class="voting-grid">
+                    <div class="work-card">
+                        <div class="work-icon">🌐</div>
+                        <span class="work-badge">Projeto Final IOT- 3º Bimestre</span>
+                        <h3>Jogo da Memória com Arduino</h3>
+                        <p>Produção de um jogo da memória utilizando: Arduino, LEDs, botões e display.</p>
+                        <div class="card-actions-super">
+                            <button class="box-btn primary vote-btn" data-project="iot">Votar neste Projeto</button>
+                            <span class="vote-count" id="iot-votes">0 votos</span>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-icon">🧪</div>
+                        <span class="work-badge">Ciências da Natureza - 3º Bimestre</span>
+                        <h3>Integrada CN</h3>
+                        <p>Pesquisa com dados de eficácia de diferentes medicamentos utilizados para tratar infecções neurológicas.</p>
+                        <div class="card-actions-super">
+                            <button class="box-btn primary vote-btn" data-project="quimica">Votar neste Projeto</button>
+                            <span class="vote-count" id="quimica-votes">0 votos</span>
+                        </div>
+                    </div>
+
+                    <div class="work-card">
+                        <div class="work-icon">🔗</div>
+                        <span class="work-badge">Ciências Humanas - 3º Bimestre</span>
+                        <h3>Documento de Posição Oficial</h3>
+                        <p>Elaboração do Documento de Posição Oficial (DPO), presente na Integrada de Ciências Humanas.</p>
+                        <div class="card-actions-super">
+                            <button class="box-btn primary vote-btn" data-project="interdisciplinar">Votar neste Projeto</button>
+                            <span class="vote-count" id="interdisciplinar-votes">0 votos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RANKING EM TEMPO REAL -->
+            <div class="content-box success super-fade-in">
+                <div class="box-header">
+                    <div class="box-icon">🏆</div>
+                    <h2 class="box-title">Ranking em Tempo Real</h2>
+                </div>
+                <div class="box-content">
+                    <p>Acompanhe a preferência dos visitantes e veja quais projetos estão se destacando!</p>
+                </div>
+                
+                <div class="ranking-container">
+                    <div class="ranking-list" id="ranking-list">
+                        <!-- Ranking será gerado dinamicamente -->
+                    </div>
+                </div>
+                
+                <div class="box-actions">
+                    <a href="../index.html" class="box-btn primary">Voltar ao Início</a>
+                    <a href="iot.html" class="box-btn">Ver Todos os Projetos</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+            <p>Entre em contato: <a href="mailto:luisa.maraujo@hotmail.com">luisa.maraujo@hotmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de Votação com LocalStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar votos se não existirem
+            if (!localStorage.getItem('votes')) {
+                const initialVotes = {
+                    iot: 0,
+                    quimica: 0,
+                    interdisciplinar: 0
+                };
+                localStorage.setItem('votes', JSON.stringify(initialVotes));
+            }
+
+            // Carregar votos
+            const votes = JSON.parse(localStorage.getItem('votes'));
+            
+            // Atualizar contadores na página
+            updateVoteCounts(votes);
+            updateRanking(votes);
+
+            // Adicionar event listeners para os botões de votação
+            document.querySelectorAll('.vote-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const project = this.getAttribute('data-project');
+                    voteForProject(project);
+                });
+            });
+
+            // Sistema de formulário de contato
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Simular envio do formulário
+                const contactData = {
+                    name: name,
+                    email: email,
+                    message: message,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Salvar no localStorage (simulando banco de dados)
+                let contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
+                contacts.push(contactData);
+                localStorage.setItem('contacts', JSON.stringify(contacts));
+
+                // Mostrar mensagem de sucesso
+                alert('Mensagem enviada com sucesso! Obrigado pelo contato.');
+                
+                // Limpar formulário
+                this.reset();
+            });
+
+            // Animações para os campos do formulário
+            document.querySelectorAll('.form-control-modern').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    if (this.value === '') {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+        });
+
+        function voteForProject(project) {
+            const votes = JSON.parse(localStorage.getItem('votes'));
+            
+            // Verificar se o usuário já votou hoje
+            const lastVoteDate = localStorage.getItem('lastVoteDate');
+            const today = new Date().toDateString();
+            
+            if (lastVoteDate === today) {
+                alert('Você já votou hoje. Volte amanhã para votar novamente!');
+                return;
+            }
+
+            // Registrar voto
+            votes[project]++;
+            localStorage.setItem('votes', JSON.stringify(votes));
+            localStorage.setItem('lastVoteDate', today);
+
+            // Atualizar interface
+            updateVoteCounts(votes);
+            updateRanking(votes);
+
+            // Efeito visual de confirmação
+            const button = document.querySelector(`[data-project="${project}"]`);
+            button.innerHTML = '✅ Voto Computado!';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = 'Votar neste Projeto';
+                button.disabled = false;
+            }, 2000);
+        }
+
+        function updateVoteCounts(votes) {
+            document.getElementById('iot-votes').textContent = votes.iot + ' votos';
+            document.getElementById('quimica-votes').textContent = votes.quimica + ' votos';
+            document.getElementById('interdisciplinar-votes').textContent = votes.interdisciplinar + ' votos';
+        }
+
+        function updateRanking(votes) {
+            const projects = [
+                { name: 'Projeto Final IOT', votes: votes.iot, id: 'iot', icon: '🌐' },
+                { name: 'Integrada Ciências da Natureza', votes: votes.quimica, id: 'quimica', icon: '🧪' },
+                { name: 'Integrada Ciências Humanas', votes: votes.interdisciplinar, id: 'interdisciplinar', icon: '🔗' }
+            ];
+
+            // Ordenar por votos (decrescente)
+            projects.sort((a, b) => b.votes - a.votes);
+
+            const rankingList = document.getElementById('ranking-list');
+            rankingList.innerHTML = '';
+
+            projects.forEach((project, index) => {
+                const rankingItem = document.createElement('div');
+                rankingItem.className = 'ranking-item';
+                
+                // Destaque para o primeiro lugar
+                if (index === 0) {
+                    rankingItem.classList.add('ranking-gold');
+                } else if (index === 1) {
+                    rankingItem.classList.add('ranking-silver');
+                } else if (index === 2) {
+                    rankingItem.classList.add('ranking-bronze');
+                }
+
+                rankingItem.innerHTML = `
+                    <div class="ranking-position">
+                        <span class="position-number">${index + 1}º</span>
+                    </div>
+                    <div class="ranking-icon">${project.icon}</div>
+                    <div class="ranking-info">
+                        <div class="ranking-name">${project.name}</div>
+                        <div class="ranking-votes">${project.votes} votos</div>
+                    </div>
+                    <div class="ranking-bar">
+                        <div class="ranking-progress" style="width: ${(project.votes / Math.max(...projects.map(p => p.votes)) * 100) || 0}%"></div>
+                    </div>
+                `;
+                
+                rankingList.appendChild(rankingItem);
+            });
+        }
+    </script>
+
+    <style>
+        .contact-form-modern {
+            margin-top: 2rem;
+        }
+
+        .form-group-modern {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .form-control-modern {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control-modern:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group-modern label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: var(--bg-primary);
+            padding: 0 0.5rem;
+        }
+
+        .form-group-modern.focused label,
+        .form-control-modern:not(:placeholder-shown) + label {
+            top: -0.5rem;
+            left: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+
+        .voting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .vote-count {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .ranking-container {
+            margin-top: 1.5rem;
+        }
+
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ranking-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+
+        .ranking-gold {
+            border-left: 4px solid #FFD700;
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+        }
+
+        .ranking-silver {
+            border-left: 4px solid #C0C0C0;
+            background: linear-gradient(90deg, rgba(192, 192, 192, 0.1), transparent);
+        }
+
+        .ranking-bronze {
+            border-left: 4px solid #CD7F32;
+            background: linear-gradient(90deg, rgba(205, 127, 50, 0.1), transparent);
+        }
+
+        .ranking-position {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+        }
+
+        .position-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ranking-icon {
+            font-size: 1.5rem;
+        }
+
+        .ranking-info {
+            flex: 1;
+        }
+
+        .ranking-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .ranking-votes {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .ranking-bar {
+            width: 100px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .ranking-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .voting-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ranking-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+            
+            .ranking-bar {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>
